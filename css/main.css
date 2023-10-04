@@ -1,0 +1,680 @@
+/* ======================= varibles  ====================== */
+:root {
+  --color-default: #748182;
+  --color-secondary: #1c1c1c;
+  --color-primary: #343434;
+  --font-default: "Montserrat", sans-serif;
+  --font-primary: "Poppins", sans-serif;
+}
+
+.title-h {
+  font-weight: 900;
+  font-size: 40px;
+  position: relative;
+  color: var(--color-primary);
+  font-family: var(--font-default);
+  display: inline-block;
+  z-index: 4;
+}
+.title-h::after {
+  content: "";
+  width: 100%;
+  height: 30px;
+  background-image: url(../image/dots.png);
+  background-repeat: repeat;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  z-index: -1;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+}
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  position: relative;
+}
+/* ======================= start Target  ====================== */
+nav a::before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 1px;
+  background-color: #fff;
+  bottom: 0;
+  transition: all 0.3s;
+}
+body:has(#about:target) nav .about::before {
+  width: 68%;
+}
+body:has(#Services:target) nav .Services::before {
+  width: 68%;
+}
+body:has(#Portfolio:target) nav .Portfolio::before {
+  width: 68%;
+}
+body:has(#Testimonials:target) nav .Testimonials::before {
+  width: 68%;
+}
+body:has(#team:target) nav .team::before {
+  width: 68%;
+}
+body:has(#contact:target) nav .contact::before {
+  width: 68%;
+}
+
+body:has(#about:target) .home::before {
+  background-color: transparent;
+}
+body:has(#Services:target) .home::before {
+  background-color: transparent;
+}
+body:has(#Portfolio:target) .home::before {
+  background-color: transparent;
+}
+body:has(#Testimonials:target) .home::before {
+  background-color: transparent;
+}
+body:has(#team:target) .home::before {
+  background-color: transparent;
+}
+body:has(#contact:target) .home::before {
+  background-color: transparent;
+}
+
+/* ======================= End Target  ====================== */
+
+/* ============================================= */
+
+/* start nav */
+.nav-home {
+  background-color: #000000be !important;
+}
+nav {
+  /* padding: 20px 0 30px 0 !important; */
+}
+
+li.nav-item {
+  position: relative;
+}
+
+.nav-link.active::before {
+  content: "";
+  position: absolute;
+  width: 68%;
+  height: 1px;
+  background-color: #fff;
+  bottom: 0;
+  transition: all 0.3s;
+}
+nav .logo {
+  font-family: var(--font-default);
+  font-size: 18px;
+  font-weight: 800;
+  color: #fff;
+  /* padding-top: 20px; */
+}
+
+nav .nav-link,
+nav .nav-link.active {
+  color: #fff !important;
+  font-family: var(--font-primary);
+  font-size: 14px;
+  font-weight: 400;
+  /* margin: 25px 20px 0; */
+}
+nav ul {
+  /* margin: 0 -15px 0 0; */
+}
+/* End nav */
+
+/* =============================================================================== */
+
+/* Start Header */
+header {
+  background-image: url(../image/header.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  height: 100vh;
+}
+header .overlaye {
+  width: 100%;
+  height: 100vh;
+  background-color: #0000009c;
+}
+header .overlaye h1 {
+  font-size: 50px;
+  font-family: var(--font-default);
+  font-weight: 800;
+}
+header .overlaye p {
+  font-size: 44px;
+  font-family: var(--font-default);
+  font-weight: 200;
+}
+header .overlaye p::after {
+  content: " Designer |";
+  letter-spacing: 2px;
+  animation-name: typing;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes typing {
+  0% {
+    content: "Designer |";
+  }
+  1% {
+    content: "Designer|";
+  }
+  3% {
+    content: "Designe|";
+  }
+  6% {
+    content: "Design|";
+  }
+  9% {
+    content: "Desig|";
+  }
+  12% {
+    content: "Desi|";
+  }
+  15% {
+    content: "Des|";
+  }
+  18% {
+    content: "De|";
+  }
+  21% {
+    content: "D|";
+  }
+  24% {
+    content: "|";
+  }
+
+  27% {
+    content: "D|";
+  }
+  30% {
+    content: "De|";
+  }
+  33% {
+    content: "Deve|";
+  }
+  37% {
+    content: "Devel|";
+  }
+  40% {
+    content: "Develo|";
+  }
+  43% {
+    content: "Develope|";
+  }
+  47% {
+    content: "Developer|";
+  }
+  50% {
+    content: "Developer |";
+  }
+  45% {
+    content: "Developer|";
+  }
+  48% {
+    content: "Develope|";
+  }
+  51% {
+    content: "Develop|";
+  }
+  54% {
+    content: "Develo|";
+  }
+  57% {
+    content: "Devel|";
+  }
+  60% {
+    content: "Deve|";
+  }
+  63% {
+    content: "Dev|";
+  }
+  66% {
+    content: "De|";
+  }
+  69% {
+    content: "D|";
+  }
+  72% {
+    content: "|";
+  }
+  75% {
+    content: "la|";
+  }
+  78% {
+    content: "larr|";
+  }
+  81% {
+    content: "larry D|";
+  }
+  84% {
+    content: "larry Dan|";
+  }
+  87% {
+    content: "larry Dani|";
+  }
+  90% {
+    content: "larry Danie|";
+  }
+  95% {
+    content: "larry Daniel|";
+  }
+  100% {
+    content: "larry Daniels|";
+  }
+}
+
+#home .icon {
+  background-color: #000;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 5px;
+}
+/* End Header */
+
+/* =============================================================================== */
+
+/* Start Section About*/
+
+#about {
+  padding: 100px 0;
+}
+#about .image {
+  position: relative;
+}
+
+#about .image::before {
+  content: "";
+  width: 80%;
+  height: 80%;
+  position: absolute;
+  left: 20px;
+  bottom: -30px;
+  background-image: url(../image/dots.png);
+  background-repeat: repeat;
+  z-index: -1;
+}
+
+#about h2 {
+  font-weight: 800;
+  font-family: var(--font-default);
+  font-size: 30px;
+  margin-bottom: 5px;
+  color: var(--color-primary);
+}
+#about p {
+  color: var(--color-default);
+  line-height: 1.6;
+}
+#about span {
+  color: #999;
+  font-family: var(--font-primary);
+  margin-bottom: 20px;
+  display: block;
+}
+.progress {
+  height: 20px;
+  margin: 35px 0;
+}
+.progress-bar {
+  padding-left: 13px;
+  text-align: left;
+}
+#about .web::after {
+  content: "95%";
+  position: absolute;
+  right: 3px;
+  transform: translate(0, -1px);
+}
+#about .brand::after {
+  content: "80%";
+  position: absolute;
+  right: 3px;
+  transform: translate(0, -1px);
+}
+#about .development::after {
+  content: "90%";
+  right: 3px;
+  position: absolute;
+}
+/* End Section About*/
+
+/* =============================================================================== */
+
+/* Start Section Services  */
+
+#Services {
+  padding-top: 65px;
+  padding-bottom: 50px;
+  background-color: #f7f7f7;
+}
+#Services .box-services {
+  padding: 40px 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 13px 8px -10px rgba(0, 0, 0, 0.1);
+}
+
+#Services .icon-ser {
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+  font-size: 30px;
+  background-color: #eee;
+}
+#Services .icon-ser:hover {
+  background-color: var(--color-secondary);
+  color: #fff;
+}
+
+#Services h6 {
+  font-family: var(--font-default);
+  color: var(--color-primary);
+  font-size: 18px;
+  font-weight: 800;
+}
+
+#Services p {
+  font-size: 14px;
+  font-family: var(--font-primary);
+  color: var(--color-default);
+}
+
+/* End Section Services  */
+/* =============================================================================== */
+
+/* Start Section Portfolio  */
+
+#Portfolio {
+  padding-top: 65px;
+  padding-bottom: 50px;
+}
+
+#Portfolio .nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  color: #000;
+  background-color: transparent;
+}
+
+#Portfolio .nav-link {
+  color: #000;
+}
+
+#Portfolio .over {
+  position: absolute;
+  background-color: #fff;
+  top: 10px;
+  left: 20px;
+  bottom: 10px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s;
+  opacity: 0;
+}
+#Portfolio .item:hover .over {
+  opacity: 1;
+}
+#Portfolio .over p {
+  font-size: 12px;
+  color: var(--color-secondary);
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+#Portfolio .over .icon .ic1 {
+  background-color: #222;
+  margin-right: 5px;
+  color: #fff;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#Portfolio .over .icon .ic1:hover {
+  background-color: #fff;
+  border: 1px solid #222;
+  color: #222;
+}
+
+/* End Section Portfolio */
+
+/* =============================================================================== */
+/* Start Section Testimonials */
+
+#Testimonials {
+  padding-top: 65px;
+  padding-bottom: 90px;
+  background: #f7f7f7;
+}
+.carousel-indicators [data-bs-target] {
+  background-color: #d6d6d6;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  transform: translate(0, 54px);
+}
+
+#Testimonials p {
+  color: var(--color-default);
+  font-family: var(--font-primary);
+  font-size: 15px;
+}
+#Testimonials span {
+  color: #888;
+  font-size: 12px;
+  font-family: var(--font-primary);
+  font-weight: 400;
+  margin-bottom: 15px;
+  display: block;
+}
+#Testimonials h6 {
+  font-family: var(--font-default);
+  font-size: 16px;
+}
+/* End Section Testimonials */
+/* =============================================================================== */
+/* Start Section Num */
+.num {
+  padding-top: 100px;
+  padding-bottom: 70px;
+}
+.num h3 {
+  font-size: 30px;
+  font-family: var(--font-default);
+  color: var(--color-primary);
+  font-weight: 900;
+  margin-bottom: 15px;
+}
+.num p {
+  font-size: 15px;
+  font-family: var(--font-primary);
+  color: var(--color-default);
+  margin-bottom: 30px;
+}
+.num .icon-num {
+  margin-bottom: 15px;
+}
+.num .text-center {
+  padding: 0 15px;
+}
+
+/* End Section Num */
+/* =============================================================================== */
+/* Start Section Team */
+#team {
+  padding: 100px 0;
+  background-color: #f7f7f7;
+}
+
+#team .text-center {
+  padding: 20px 40px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+#team h4 {
+  font-family: var(--font-default);
+  font-size: 25px;
+  margin-bottom: 5px;
+  color: #fff;
+  font-weight: 500;
+}
+#team h5 {
+  font-family: var(--font-default);
+  font-size: 20;
+  color: #fff;
+  font-weight: 700;
+}
+
+#team .info-team {
+  position: absolute;
+  background-color: #ffffffeb;
+  left: 10px;
+  bottom: 138px;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* transform: rotateY(90deg); */
+  transition: all 0.2s;
+}
+
+#team .icon-team {
+  margin-right: 10px;
+  background-color: #222;
+  width: 30px;
+  height: 30px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+/* //////////////////////////////////////////// */
+#team .image:hover .info-team {
+  transform: rotateY(180deg);
+}
+#team .image:hover img  {
+  transform: scale(1.1);
+}
+
+
+
+/* End Section Team */
+/* =============================================================================== */
+
+/* Start Section Contact */
+
+#contact {
+  padding: 100px 0;
+}
+#contact .title {
+  margin-bottom: 80px;
+}
+#contact h6 {
+  font-family: var(--font-default);
+  font-size: 16px;
+  color: var(--color-primary);
+  margin: 20px 0 10px;
+  font-weight: 700;
+}
+#contact p {
+  font-family: var(--font-primary);
+  font-size: 15;
+  color: var(--color-default);
+}
+#contact .icon-contact {
+  background-color: #eee;
+  margin: auto;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s;
+}
+#contact .text-center:hover .icon-contact {
+  background-color: #222;
+  color: #fff;
+}
+#contact input {
+  background-color: #eee;
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 50px;
+}
+
+#contact textarea {
+  background-color: #eee;
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 10px;
+  border-radius: 5px;
+}
+#contact button {
+  color: #fff;
+  padding: 5px 30px;
+}
+#contact button:hover {
+  color: #222;
+  background-color: #fff;
+}
+#contact .padding {
+  padding: 0 120px;
+}
+
+/* End Section Contact */
+
+/* =============================================================================== */
+
+/* Start footer */
+
+footer p {
+  font-size: 13px;
+  word-spacing: 2px;
+  color: var(--color-default);
+  text-align: center;
+}
+
+/* End footer */
+
+/* =============================================================================== */
